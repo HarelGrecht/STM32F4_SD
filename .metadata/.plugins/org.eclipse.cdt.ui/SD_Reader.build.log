@@ -1,10 +1,10 @@
-01:14:35 **** Incremental Build of configuration Debug for project SD_Reader ****
+17:49:34 **** Incremental Build of configuration Debug for project SD_Reader ****
 make -j16 all 
 arm-none-eabi-size  SD_Reader.elf 
    text	   data	    bss	    dec	    hex	filename
-  23868	     16	   4032	  27916	   6d0c	SD_Reader.elf
+  28524	    108	  13580	  42212	   a4e4	SD_Reader.elf
 Finished building: default.size.stdout
  
 
-01:14:35 Build Finished. 0 errors, 0 warnings. (took 375ms)
+17:49:35 Build Finished. 0 errors, 0 warnings. (took 392ms)
 

@@ -65,7 +65,7 @@ static void MX_SDIO_SD_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void SendChunkOverUART(const char* filename);
-
+bool InitSD();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -109,7 +109,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_GPIO_WritePin(DONE_GPIO_Port, DONE_Pin, GPIO_PIN_SET);
 
-  if (f_mount(&fileSystem, "", 1) != FR_OK){
+  if(InitSD() == false) {
 	  HAL_GPIO_WritePin(GPIOD, Mount_Status_Pin|DONE_Pin, GPIO_PIN_RESET);
 	  Error_Handler();
   }
@@ -279,11 +279,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA8 */
-  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  /*Configure GPIO pin : CD_Pin */
+  GPIO_InitStruct.Pin = CD_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(CD_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -352,6 +352,39 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
     if (huart->Instance == USART2) {
         dma_tx_complete = 1;  // Set DMA transmission complete flag
     }
+}
+
+bool InitSD() {
+	if (HAL_SD_Init(&hsd) != HAL_OK) {
+		Error_Handler();
+		return false;
+	}
+	HAL_Delay(100);
+    if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_RESET) {
+        printf("No SD card detected\r\n");
+        return false;  // Exit if no card is detected
+    }
+    FRESULT res  = f_mount(&fileSystem, "", 1);
+	if (res != FR_OK) {
+		switch (res) {
+			case FR_NO_FILESYSTEM:
+				printf("no filesystem found");
+				break;
+			case FR_DISK_ERR:
+				printf("disk error");
+				break;
+			case FR_NOT_READY:
+				printf("Not ready");
+				break;
+			default:
+				printf("Unknown error");
+				break;
+		}
+		return false;
+
+	}
+	printf("SD card mounted successfully");
+	return true;
 }
 /* USER CODE END 4 */
 

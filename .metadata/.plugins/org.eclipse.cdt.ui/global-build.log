@@ -788,3 +788,539 @@ arm-none-eabi-size  SD_Reader.elf
   23868	     16	   4032	  27916	   6d0c	SD_Reader.elf
 Finished building: default.size.stdout
  
+11:48:38 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23868	     16	   4032	  27916	   6d0c	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+11:48:45 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23868	     16	   4032	  27916	   6d0c	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+11:58:39 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'InitSD':
+../Core/Src/main.c:358:13: warning: implicit declaration of function 'BSP_SD_INIT'; did you mean 'BSP_SD_Init'? [-Wimplicit-function-declaration]
+  358 |         if (BSP_SD_INIT() != MSD_OK) {
+      |             ^~~~~~~~~~~
+      |             BSP_SD_Init
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.17.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `InitSD':
+C:/Projects/STM32_Projects/F4_SD/SD_Reader/Debug/../Core/Src/main.c:358: undefined reference to `BSP_SD_INIT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: SD_Reader.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+11:59:28 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+11:59:34 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:00:25 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:00:29 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:01:12 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:03:57 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:04:02 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:04:48 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:04:58 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:05:37 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:05:52 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:06:15 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	   4032	  27976	   6d48	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:10:32 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:10:47 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:19:51 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:20:02 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:32:33 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:32:50 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:32:53 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23928	     16	  13248	  37192	   9148	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:35:37 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:35:45 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:50:01 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/option/syscall.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/option/syscall.d" -MT"Middlewares/Third_Party/FatFs/src/option/syscall.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/option/syscall.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/diskio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/diskio.d" -MT"Middlewares/Third_Party/FatFs/src/diskio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/diskio.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/ff.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/ff.d" -MT"Middlewares/Third_Party/FatFs/src/ff.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/ff.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/ff_gen_drv.d" -MT"Middlewares/Third_Party/FatFs/src/ff_gen_drv.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/ff_gen_drv.o"
+arm-none-eabi-gcc "../FATFS/Target/sd_diskio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"FATFS/Target/sd_diskio.d" -MT"FATFS/Target/sd_diskio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FATFS/Target/sd_diskio.o"
+arm-none-eabi-gcc "../FATFS/App/fatfs.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"FATFS/App/fatfs.d" -MT"FATFS/App/fatfs.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FATFS/App/fatfs.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:50:21 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:51:07 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+12:51:15 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:51:35 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+12:51:55 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+16:46:12 **** Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+16:46:37 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+16:46:50 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26648	    108	  13580	  40336	   9d90	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+16:50:42 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  26684	    108	  13580	  40372	   9db4	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+16:50:50 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26684	    108	  13580	  40372	   9db4	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+16:52:21 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26684	    108	  13580	  40372	   9db4	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:03:24 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'InitSD':
+../Core/Src/main.c:387:47: error: expected ';' before 'return'
+  387 |         printf("SD card mounted successfully")
+      |                                               ^
+      |                                               ;
+  388 |         return true;
+      |         ~~~~~~                                 
+../Core/Src/main.c:389:1: warning: control reaches end of non-void function [-Wreturn-type]
+  389 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:04:25 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:04:40 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:05:01 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:11:01 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'InitSD':
+../Core/Src/main.c:375:39: warning: statement with no effect [-Wunused-value]
+  375 |                                 break;362
+      |                                       ^~~
+../Core/Src/main.c:375:42: error: expected ';' before 'case'
+  375 |                                 break;362
+      |                                          ^
+      |                                          ;
+  376 |                         case FR_NOT_READY:
+      |                         ~~~~              
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+17:11:07 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:11:11 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:11:34 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:11:38 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:36:28 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:36:46 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28520	    108	  13580	  42208	   a4e0	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:39:03 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28516	    108	  13580	  42204	   a4dc	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:42:20 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28516	    108	  13580	  42204	   a4dc	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:42:25 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28516	    108	  13580	  42204	   a4dc	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:49:00 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SD_Reader.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Projects\STM32_Projects\F4_SD\SD_Reader\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SD_Reader.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SD_Reader.elf
+ 
+arm-none-eabi-size  SD_Reader.elf 
+arm-none-eabi-objdump -h -S SD_Reader.elf  > "SD_Reader.list"
+   text	   data	    bss	    dec	    hex	filename
+  28524	    108	  13580	  42212	   a4e4	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+Finished building: SD_Reader.list
+ 
+17:49:09 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28524	    108	  13580	  42212	   a4e4	SD_Reader.elf
+Finished building: default.size.stdout
+ 
+17:49:34 **** Incremental Build of configuration Debug for project SD_Reader ****
+make -j16 all 
+arm-none-eabi-size  SD_Reader.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28524	    108	  13580	  42212	   a4e4	SD_Reader.elf
+Finished building: default.size.stdout
+ 

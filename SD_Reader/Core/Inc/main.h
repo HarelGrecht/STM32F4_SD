@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define Mount_Status_GPIO_Port GPIOD
 #define DONE_Pin GPIO_PIN_15
 #define DONE_GPIO_Port GPIOD
+#define CD_Pin GPIO_PIN_8
+#define CD_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 
