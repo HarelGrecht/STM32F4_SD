@@ -7,5 +7,5 @@
 ../Core/Src/main.c:293:6:HAL_UART_Rx_Callback	6
 ../Core/Src/main.c:314:6:SendChunkOverUART	8
 ../Core/Src/main.c:351:6:HAL_UART_TxCpltCallback	2
-../Core/Src/main.c:357:6:InitSD	8
-../Core/Src/main.c:395:6:Error_Handler	1
+../Core/Src/main.c:357:6:InitSD	9
+../Core/Src/main.c:400:6:Error_Handler	1

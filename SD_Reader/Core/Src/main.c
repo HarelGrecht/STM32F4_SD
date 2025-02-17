@@ -279,11 +279,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : CD_Pin */
-  GPIO_InitStruct.Pin = CD_Pin;
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(CD_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -360,11 +360,16 @@ bool InitSD() {
 		return false;
 	}
 	HAL_Delay(100);
+	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8) == GPIO_PIN_RESET){
+		printf("PA8 reset");
+	}else{
+		printf("PA8 SET");
+	}
     if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_11) == GPIO_PIN_RESET) {
         printf("No SD card detected\r\n");
         return false;  // Exit if no card is detected
     }
-    FRESULT res  = f_mount(&fileSystem, "", 1);
+    FRESULT res  = f_mount(&fileSystem, " ", 1);
 	if (res != FR_OK) {
 		switch (res) {
 			case FR_NO_FILESYSTEM:
